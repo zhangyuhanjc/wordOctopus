@@ -16,3 +16,43 @@ https://apps.apple.com/app/wordoctopus/id6449214839
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- 使用Animate.css实现动态效果 -->
+<h1 class="animate__animated animate__bounce">Hello, World!</h1>
+
+<!-- 使用Canvas元素实现动态特效 -->
+<canvas id="myCanvas"></canvas>
+
+<script>
+  const canvas = document.getElementById('myCanvas');
+  const context = canvas.getContext('2d');
+  let x = 0;
+  let y = 0;
+  let dx = 5;
+  let dy = 5;
+
+  function drawCircle() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.beginPath();
+    context.arc(x, y, 40, 0, 2 * Math.PI);
+    context.fillStyle = 'blue';
+    context.fill();
+
+    if (x + dx > canvas.width || x + dx < 0) {
+      dx = -dx;
+    }
+
+    if (y + dy > canvas.height || y + dy < 0) {
+      dy = -dy;
+    }
+
+    x += dx;
+    y += dy;
+    
+    // 递归绘制动画
+    requestAnimationFrame(drawCircle);
+  }
+
+  drawCircle();
+</script>
