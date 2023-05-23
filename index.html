@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wordOctopus-背单词应用</title>
+    <style>
+        /*卡片样式*/
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: box-shadow 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        /*卡片悬停样式*/
+        .card:hover {
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,14 +30,14 @@
         <h1>欢迎使用wordOctopus背单词应用！</h1>
     </header>
     <main>
-        <section>
+        <section class="card">
             <h2>应用简介</h2>
             <p>我们的应用已包含四级词汇，后续还会更新更多！这款应用将帮助您提高词汇量并轻松掌握英语。</p>
             <p>我们的应用程序提供了独特的背单词方式--单词卡，在单词卡中您将感受到短期多次记忆带来的快速学习体验！</p>
             <p>我们的应用程序适用于学生和英语初学者，快来下载我们的应用程序，开始学习英语吧！</p>
             <a href="https://apps.apple.com/app/wordoctopus/id6449214839" target="_blank">点击下载应用程序</a>
         </section>
-        <section>
+        <section class="card">
             <h2>更新内容</h2>
             <ul>
                 <li>2023.05.22-优化单词卡复习体验，为了更好的帮助用户整理单词卡，现在单词卡要录入6个词以上才能归档新建单词卡（不能一张纸只写一个词，要节约用纸啊）</li>
